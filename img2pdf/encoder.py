@@ -7,7 +7,7 @@ import zlib
 
 from PIL import Image
 
-from image_files import JPEG_SUFFIXES, image_info
+from img2pdf.files import JPEG_SUFFIXES, image_info
 
 
 def make_image_stream(

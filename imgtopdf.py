@@ -6,8 +6,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from converter import make_pdf
-from image_files import VALID_ROTATIONS, collect_images
+from img2pdf.converter import make_pdf
+from img2pdf.files import VALID_ROTATIONS, collect_images
 
 
 def parse_args() -> argparse.Namespace:

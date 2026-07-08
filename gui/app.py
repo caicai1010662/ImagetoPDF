@@ -8,11 +8,11 @@ import sys
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from converter import make_pdf
-from image_files import SUPPORTED_SUFFIXES, exif_rotation, image_info, natural_key
-from theme import BG, PANEL, configure_style
-from gui_preview import PreviewPanel
-from gui_pagetable import PageTable
+from img2pdf.converter import make_pdf
+from img2pdf.files import SUPPORTED_SUFFIXES, exif_rotation, image_info, natural_key
+from gui.theme import BG, PANEL, configure_style
+from gui.preview import PreviewPanel
+from gui.pagetable import PageTable
 
 
 class ImageToPdfApp(tk.Tk):

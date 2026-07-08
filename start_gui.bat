@@ -15,4 +15,4 @@ if errorlevel 1 (
     exit /b 1
 )
 
-start "IMGtoPDF" "%PYTHON%" "%~dp0gui.py"
+start "IMGtoPDF" "%PYTHON%" "%~dp0main.py"

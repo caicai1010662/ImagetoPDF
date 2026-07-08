@@ -8,7 +8,7 @@ from tkinter import ttk
 
 from PIL import Image, ImageTk
 
-from theme import CANVAS_BG, LINE, MUTED, SHADOW
+from gui.theme import CANVAS_BG, LINE, MUTED, SHADOW
 
 
 class PreviewPanel(ttk.Frame):

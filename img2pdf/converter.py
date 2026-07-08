@@ -5,9 +5,9 @@ from __future__ import annotations
 from pathlib import Path
 import tempfile
 
-from image_files import VALID_ROTATIONS, exif_rotation, image_info
-from image_encoder import make_image_stream
-from pdf_writer import PdfWriter, pdf_text
+from img2pdf.files import VALID_ROTATIONS, exif_rotation, image_info
+from img2pdf.encoder import make_image_stream
+from img2pdf.writer import PdfWriter, pdf_text
 
 
 MetaEntry = tuple[int, int, str, int | None]

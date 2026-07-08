@@ -24,7 +24,7 @@
 或者手动运行：
 
 ```powershell
-python .\gui.py
+python .\main.py
 ```
 
 如果提示缺少 Pillow，请执行：
@@ -37,15 +37,10 @@ python -m pip install Pillow
 
 如果只分享软件本体，建议发送这些文件：
 
-- `gui.py`
-- `gui_preview.py`
-- `gui_pagetable.py`
-- `theme.py`
+- `main.py`
 - `imgtopdf.py`
-- `converter.py`
-- `image_files.py`
-- `image_encoder.py`
-- `pdf_writer.py`
+- `img2pdf/`
+- `gui/`
 - `start_gui.bat`
 - `README.md`
 
@@ -53,15 +48,24 @@ python -m pip install Pillow
 
 ## 项目结构
 
-- `gui.py`：桌面界面入口。
-- `gui_preview.py`：缩略图预览面板组件。
-- `gui_pagetable.py`：页面列表表格组件。
-- `theme.py`：配色与 Ttk 样式配置。
-- `imgtopdf.py`：命令行入口。
-- `converter.py`：图片转 PDF 的主流程。
-- `image_files.py`：图片文件发现、排序和元数据提取。
-- `image_encoder.py`：PDF 图像流编码器。
-- `pdf_writer.py`：底层 PDF 对象写入。
+```
+├── main.py              # 桌面界面启动入口
+├── imgtopdf.py          # 命令行启动入口
+├── start_gui.bat        # Windows 一键启动脚本
+├── requirements.txt
+│
+├── img2pdf/             # 核心库（无界面依赖）
+│   ├── converter.py     # 图片转 PDF 主流程
+│   ├── files.py         # 图片文件发现、排序、元数据
+│   ├── encoder.py       # PDF 图像流编码器
+│   └── writer.py        # 底层 PDF 对象写入
+│
+└── gui/                 # 桌面界面组件
+    ├── app.py           # 主窗口应用
+    ├── preview.py       # 缩略图预览面板
+    ├── pagetable.py     # 页面列表表格
+    └── theme.py         # 配色与样式配置
+```
 
 ## 命令行备用
 
