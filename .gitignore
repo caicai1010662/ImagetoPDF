@@ -3,3 +3,6 @@ __pycache__/
 tmp/
 
 IMG/
+build/
+dist/
+*.spec
